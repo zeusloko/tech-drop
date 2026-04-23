@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TechDrop - As melhores promoções de tecnologia atualizadas diariamente. Periféricos, notebooks, smartphones e componentes com os menores preços da internet.">
+<meta name="keywords" content="promoções de tecnologia, periféricos baratos, ofertas de notebook, descontos em eletrônicos, smartphone promoção, PC gamer barato, amazon promoção, shopee tecnologia">
+<meta property="og:title" content="TechDrop - Promoções Reais de Tecnologia Todo Dia">
+<meta property="og:description" content="Curadoria diária das melhores ofertas de tecnologia dos principais marketplaces do Brasil.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<title>TechDrop - Promoções Reais de Tecnologia Todo Dia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-base:       #09090e;
+  --bg-surface:    #0e0e17;
+  --bg-card:       #12121c;
+  --bg-card-h:     #181827;
+  --border:        rgba(255,255,255,0.06);
+  --border-md:     rgba(255,255,255,0.10);
+  --border-acc:    rgba(99,102,241,0.35);
+  --accent:        #6366f1;
+  --accent-b:      #818cf8;
+  --accent-glow:   rgba(99,102,241,0.11);
+  --cyan:          #22d3ee;
+  --green:         #4ade80;
+  --green-bg:      rgba(74,222,128,0.10);
+  --text-1:        #eeeeff;
+  --text-2:        #7878a0;
+  --text-3:        #3a3a5c;
+  --c-amazon:      #ff9900;
+  --c-shopee:      #ee4d2d;
+  --c-ali:         #e62e2e;
+  --c-ml:          #e8c800;
+  --font-d: 'Syne', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
+  --r1: 8px; --r2: 12px; --r3: 16px; --r4: 22px;
+  --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg-base);color:var(--text-1);
+  font-family:var(--font-b);font-size:15px;line-height:1.6;
+  min-height:100vh;overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(99,102,241,.024) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(99,102,241,.024) 1px,transparent 1px);
+  background-size:56px 56px;pointer-events:none;z-index:0;
+}
+.wrap{max-width:1260px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+
+/* ── AD SLOTS ── */
+.ad-slot{
+  display:none;background:rgba(255,255,255,.012);
+  border:1px dashed rgba(255,255,255,.05);
+  border-radius:var(--r1);align-items:center;justify-content:center;
+  color:var(--text-3);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+}
+.ad-slot.live{display:flex}
+.ad-top{height:90px}
+.ad-mid{height:90px;margin:40px 0}
+.ad-bot{height:90px;margin-top:40px}
+
+/* ── HEADER ── */
+header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(9,9,14,.92);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--border);
+}
+nav{display:flex;align-items:center;height:62px;gap:0}
+
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;margin-right:26px}
+.logo-ic{
+  width:32px;height:32px;background:var(--accent);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.logo-ic::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 60%);
+}
+.logo-ic svg{width:16px;height:16px;fill:#fff;position:relative;z-index:1}
+.logo-txt{font-family:var(--font-d);font-size:19px;font-weight:800;color:var(--text-1);letter-spacing:-.04em}
+.logo-txt span{color:var(--accent-b)}
+
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;flex:1}
+.nav-links a{
+  color:var(--text-2);text-decoration:none;
+  font-size:13.5px;font-weight:500;padding:6px 11px;
+  border-radius:var(--r1);transition:all var(--ease);white-space:nowrap;
+}
+.nav-links a:hover{color:var(--text-1);background:rgba(255,255,255,.04)}
+.nav-links a.active{color:var(--accent-b);background:var(--accent-glow)}
+
+.nav-srch{flex-shrink:0;position:relative;width:210px;margin-left:auto;margin-right:10px}
+.nav-srch svg{
+  position:absolute;left:9px;top:50%;transform:translateY(-50%);
+  color:var(--text-3);pointer-events:none;width:14px;height:14px;
+}
+.nav-srch input{
+  width:100%;background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r1);color:var(--text-1);font-family:var(--font-b);
+  font-size:13.5px;padding:7px 12px 7px 30px;outline:none;
+  transition:border-color var(--ease);
+}
+.nav-srch input:focus{border-color:var(--border-acc)}
+.nav-srch input::placeholder{color:var(--text-3)}
+
+.btn-alert{
+  flex-shrink:0;background:var(--accent);color:#fff;border:none;
+  padding:7px 14px;border-radius:var(--r1);font-size:13px;font-weight:500;
+  cursor:pointer;font-family:var(--font-b);transition:all var(--ease);white-space:nowrap;
+}
+.btn-alert:hover{background:var(--accent-b);transform:translateY(-1px)}
+
+.btn-ham{
+  display:none;background:none;border:1px solid var(--border);
+  color:var(--text-2);padding:6px 9px;border-radius:var(--r1);
+  cursor:pointer;font-size:17px;line-height:1;margin-left:10px;
+}
+
+/* ── DRAWER ── */
+.drawer-bg{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(0,0,0,.72);backdrop-filter:blur(4px);
+}
+.drawer-bg.open{display:block}
+.drawer{
+  position:absolute;top:0;right:0;bottom:0;
+  width:min(290px,85vw);background:var(--bg-surface);
+  border-left:1px solid var(--border);
+  padding:18px;display:flex;flex-direction:column;gap:5px;
+  transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);
+}
+.drawer-bg.open .drawer{transform:translateX(0)}
+.drawer-x{
+  align-self:flex-end;background:none;border:1px solid var(--border);
+  color:var(--text-2);width:30px;height:30px;border-radius:var(--r1);
+  cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:8px;
+}
+.dsrch{position:relative;margin-bottom:6px}
+.dsrch svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text-3);width:14px;height:14px;pointer-events:none}
+.dsrch input{
+  width:100%;background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r1);color:var(--text-1);font-family:var(--font-b);
+  font-size:14px;padding:9px 12px 9px 30px;outline:none;
+}
+.dsrch input:focus{border-color:var(--border-acc)}
+.dsrch input::placeholder{color:var(--text-3)}
+.drawer a{
+  color:var(--text-2);text-decoration:none;font-size:14.5px;font-weight:500;
+  padding:11px 8px;border-bottom:1px solid var(--border);
+  transition:color var(--ease);display:flex;align-items:center;gap:9px;
+}
+.drawer a:hover,.drawer a.active{color:var(--accent-b)}
+.d-dot{width:6px;height:6px;border-radius:50%;background:var(--text-3);flex-shrink:0;transition:background var(--ease)}
+.drawer a.active .d-dot{background:var(--accent-b)}
+.drawer-foot{margin-top:auto;padding-top:14px}
+.drawer-foot button{
+  width:100%;background:var(--accent);color:#fff;border:none;
+  padding:11px;border-radius:var(--r1);font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font-b);
+}
+
+/* ── HERO ── */
+.hero{padding:64px 0 50px;position:relative;overflow:hidden}
+.hero-glow{
+  position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:680px;height:340px;
+  background:radial-gradient(ellipse,rgba(99,102,241,.10) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(99,102,241,.09);border:1px solid rgba(99,102,241,.20);
+  color:var(--accent-b);font-size:12px;font-weight:500;
+  padding:5px 12px;border-radius:100px;margin-bottom:20px;letter-spacing:.04em;
+}
+.hero-badge::before{
+  content:'';width:6px;height:6px;background:var(--accent-b);border-radius:50%;
+  animation:blink 2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+h1.htitle{
+  font-family:var(--font-d);
+  font-size:clamp(32px,5vw,58px);font-weight:800;
+  line-height:1.08;letter-spacing:-.035em;max-width:700px;margin-bottom:18px;
+}
+h1.htitle em{
+  font-style:normal;
+  background:linear-gradient(128deg,var(--accent-b) 0%,var(--cyan) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hsub{color:var(--text-2);font-size:16px;max-width:490px;line-height:1.7;margin-bottom:34px}
+.hstats{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.hstat{display:flex;flex-direction:column;gap:1px}
+.hnum{font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--text-1)}
+.hlbl{font-size:11px;color:var(--text-3);letter-spacing:.05em;text-transform:uppercase}
+.hdiv{width:1px;height:26px;background:var(--border-md)}
+
+/* ── MP BAR ── */
+.mp-bar{
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,.007);padding:13px 0;margin-bottom:50px;
+}
+.mp-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.mp-scroll::-webkit-scrollbar{display:none}
+.mp-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r1);padding:7px 13px;
+  font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;
+  color:var(--text-2);transition:all var(--ease);
+  font-family:var(--font-b);
+}
+.mp-pill:hover{border-color:var(--border-md);color:var(--text-1)}
+.mp-pill.active{border-color:var(--border-acc);color:var(--text-1);background:var(--bg-card-h)}
+.mp-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* ── SECTION HEADER ── */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:10px}
+.sec-head h2{font-family:var(--font-d);font-size:21px;font-weight:700;letter-spacing:-.025em}
+.sec-head h2 .ct{font-family:var(--font-b);font-size:13px;font-weight:400;color:var(--text-3);margin-left:7px}
+
+/* ── CAT CARDS ── */
+#sec-cat{margin-bottom:50px}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}
+.cat-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r3);padding:17px 15px;cursor:pointer;
+  transition:all var(--ease);text-decoration:none;
+  display:flex;flex-direction:column;gap:9px;
+  position:relative;overflow:hidden;
+}
+.cat-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--cyan));
+  opacity:0;transition:opacity var(--ease);
+}
+.cat-card:hover,.cat-card.on{border-color:var(--border-acc);background:var(--bg-card-h);transform:translateY(-2px)}
+.cat-card:hover::after,.cat-card.on::after{opacity:1}
+.cat-ic{width:38px;height:38px;background:var(--accent-glow);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.cat-nm{font-weight:600;font-size:13px;color:var(--text-1);line-height:1.3}
+.cat-ct{font-size:11.5px;color:var(--text-3)}
+
+/* ── FEATURED ── */
+#sec-feat{margin-bottom:50px}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.feat-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r4);overflow:hidden;
+  display:flex;transition:all var(--ease);
+  text-decoration:none;color:inherit;min-height:175px;
+}
+.feat-card:hover{border-color:var(--border-acc);background:var(--bg-card-h);transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.32)}
+.feat-img{
+  width:36%;min-height:150px;overflow:hidden;flex-shrink:0;
+  background:rgba(255,255,255,.022);
+  display:flex;align-items:center;justify-content:center;padding:16px;
+}
+.feat-img img{width:100%;height:100%;object-fit:contain;transition:transform .38s;max-height:150px}
+.feat-card:hover .feat-img img{transform:scale(1.05)}
+.feat-body{padding:18px 16px;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+.feat-mp{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.feat-nm{font-family:var(--font-d);font-size:15px;font-weight:700;line-height:1.3;color:var(--text-1)}
+.feat-ds{font-size:12px;color:var(--text-2);line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.feat-pr{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin-top:3px}
+.feat-pnow{font-family:var(--font-d);font-size:21px;font-weight:800;color:var(--text-1);letter-spacing:-.03em}
+.feat-pold{font-size:12px;color:var(--text-3);text-decoration:line-through}
+.feat-pct{font-size:11px;font-weight:600;color:var(--green);background:var(--green-bg);padding:2px 7px;border-radius:100px}
+.feat-cta{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--accent);color:#fff;padding:7px 14px;
+  border-radius:var(--r1);font-size:12.5px;font-weight:600;
+  align-self:flex-start;margin-top:5px;pointer-events:none;
+  transition:background var(--ease);
+}
+.feat-card:hover .feat-cta{background:var(--accent-b)}
+
+/* ── FILTER TABS ── */
+.ftabs{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.ftab{
+  background:var(--bg-card);border:1px solid var(--border);
+  color:var(--text-2);padding:6px 14px;border-radius:100px;
+  font-size:13px;font-weight:500;cursor:pointer;
+  transition:all var(--ease);font-family:var(--font-b);white-space:nowrap;
+}
+.ftab:hover{border-color:var(--border-md);color:var(--text-1)}
+.ftab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ── PRODUCT GRID ── */
+#sec-prods{margin-bottom:50px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:13px}
+
+/* ── PRODUCT CARD ── */
+.pcard{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r3);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:all var(--ease);position:relative;
+}
+.pcard:hover{
+  border-color:var(--border-acc);background:var(--bg-card-h);
+  transform:translateY(-3px);box-shadow:0 16px 32px rgba(0,0,0,.36);
+}
+.pbadge{
+  position:absolute;top:10px;left:10px;z-index:2;
+  padding:3px 9px;border-radius:100px;
+  font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+}
+.b-hot{background:#ef4444;color:#fff}
+.b-new{background:rgba(34,211,238,.13);color:#22d3ee;border:1px solid rgba(34,211,238,.27)}
+.b-top{background:rgba(168,85,247,.13);color:#c084fc;border:1px solid rgba(168,85,247,.27)}
+.b-sale{background:rgba(99,102,241,.13);color:var(--accent-b);border:1px solid rgba(99,102,241,.27)}
+.pimg{
+  aspect-ratio:4/3;overflow:hidden;
+  background:rgba(255,255,255,.022);
+  display:flex;align-items:center;justify-content:center;padding:18px;
+}
+.pimg img{width:100%;height:100%;object-fit:contain;transition:transform .36s;max-height:130px}
+.pcard:hover .pimg img{transform:scale(1.07)}
+.pbody{padding:13px 13px 9px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pmp{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.pmp-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.pname{font-weight:600;font-size:13.5px;line-height:1.4;color:var(--text-1);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pdesc{font-size:12px;color:var(--text-2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ppr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-top:3px}
+.pnow{font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--text-1);letter-spacing:-.02em}
+.pwas{font-size:12px;color:var(--text-3);text-decoration:line-through}
+.ppct{font-size:10.5px;font-weight:600;color:var(--green);background:var(--green-bg);padding:2px 6px;border-radius:100px}
+.pfoot{padding:0 13px 13px}
+.btn-offer{
+  display:block;width:100%;background:var(--accent);color:#fff;
+  text-align:center;text-decoration:none;padding:10px;border-radius:var(--r1);
+  font-weight:600;font-size:13.5px;transition:background var(--ease);
+  border:none;cursor:pointer;font-family:var(--font-b);
+}
+.btn-offer::after{content:' →';opacity:.6}
+.btn-offer:hover{background:var(--accent-b)}
+
+/* ── EMPTY STATE ── */
+.empty{
+  grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-3);
+}
+.empty svg{width:36px;height:36px;margin-bottom:12px;opacity:.3}
+.empty p{font-size:14.5px}
+
+/* ── TRENDING ── */
+#sec-trend{margin-bottom:50px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.titem{
+  display:flex;align-items:center;gap:11px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r2);padding:10px 13px;
+  text-decoration:none;color:inherit;transition:all var(--ease);
+}
+.titem:hover{border-color:var(--border-acc);background:var(--bg-card-h)}
+.trank{font-family:var(--font-d);font-size:19px;font-weight:800;color:var(--text-3);width:24px;text-align:center;flex-shrink:0}
+.trank.gold{color:#f59e0b}
+.trank.silver{color:#94a3b8}
+.trank.bronze{color:#b87333}
+.timg{width:46px;height:46px;border-radius:var(--r1);object-fit:contain;background:rgba(255,255,255,.022);padding:3px;flex-shrink:0}
+.tinfo{flex:1;min-width:0}
+.tnm{font-size:13px;font-weight:600;color:var(--text-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tmeta{display:flex;align-items:center;gap:6px;margin-top:3px}
+.tpr{font-family:var(--font-d);font-size:14.5px;font-weight:700;color:var(--text-1);flex-shrink:0}
+
+/* ── TOAST ── */
+#toast{
+  position:fixed;bottom:20px;right:20px;z-index:999;
+  background:var(--bg-card);border:1px solid var(--border-acc);
+  border-radius:var(--r2);padding:12px 17px;
+  font-size:13.5px;color:var(--text-1);
+  opacity:0;transform:translateY(7px);
+  transition:all .28s;pointer-events:none;max-width:290px;
+}
+#toast.on{opacity:1;transform:translateY(0)}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:48px 0 28px;position:relative;z-index:1}
+.ftop{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.fbrand p{color:var(--text-2);font-size:13px;line-height:1.7;margin-top:11px;max-width:270px}
+.fcol h4{font-family:var(--font-d);font-size:13px;font-weight:700;margin-bottom:13px;color:var(--text-1)}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol ul a{color:var(--text-2);text-decoration:none;font-size:13px;transition:color var(--ease)}
+.fcol ul a:hover{color:var(--accent-b)}
+.fdisc{
+  background:rgba(255,255,255,.016);border:1px solid var(--border);
+  border-radius:var(--r1);padding:12px 15px;
+  font-size:11px;color:var(--text-3);line-height:1.65;margin-bottom:20px;
+}
+.fdisc strong{color:var(--text-2)}
+.fbot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.fbot p{color:var(--text-3);font-size:11.5px}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp .4s ease both;opacity:0}
+.anim:nth-child(1){animation-delay:.04s}.anim:nth-child(2){animation-delay:.08s}
+.anim:nth-child(3){animation-delay:.12s}.anim:nth-child(4){animation-delay:.16s}
+.anim:nth-child(5){animation-delay:.20s}.anim:nth-child(6){animation-delay:.24s}
+.anim:nth-child(7){animation-delay:.28s}.anim:nth-child(8){animation-delay:.32s}
+.anim:nth-child(9){animation-delay:.36s}.anim:nth-child(10){animation-delay:.40s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:920px){
+  .nav-links,.nav-srch,.btn-alert{display:none}
+  .btn-ham{display:flex;align-items:center;justify-content:center}
+  .feat-grid{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr 1fr}
+  .fbrand{grid-column:1/-1}
+}
+@media(max-width:700px){
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .tgrid{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr}
+}
+@media(max-width:460px){
+  .hero{padding:42px 0 36px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .hdiv{display:none}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .feat-img{width:42%}
+}
+</style>
+</head>
+<body>
+
+<!-- DRAWER -->
+<div class="drawer-bg" id="dBg" onclick="if(event.target===this)closeDrawer()">
+  <nav class="drawer">
+    <button class="drawer-x" onclick="closeDrawer()" aria-label="Fechar menu">&#x2715;</button>
+    <div class="dsrch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" placeholder="Buscar produto..." oninput="handleSearch(this.value)" aria-label="Buscar produto">
+    </div>
+    <a href="#" data-cat="all"         onclick="drawerCat('all');return false;">        <span class="d-dot"></span>Todas as ofertas</a>
+    <a href="#" data-cat="perifericos" onclick="drawerCat('perifericos');return false;"><span class="d-dot"></span>Perifericos de PC</a>
+    <a href="#" data-cat="smartphones" onclick="drawerCat('smartphones');return false;"><span class="d-dot"></span>Smartphones</a>
+    <a href="#" data-cat="notebooks"   onclick="drawerCat('notebooks');return false;">  <span class="d-dot"></span>Notebooks</a>
+    <a href="#" data-cat="componentes" onclick="drawerCat('componentes');return false;"><span class="d-dot"></span>Componentes</a>
+    <a href="#" data-cat="acessorios"  onclick="drawerCat('acessorios');return false;"> <span class="d-dot"></span>Acessorios</a>
+    <div class="drawer-foot">
+      <button onclick="showToast('Em breve: alertas de preco por e-mail!');closeDrawer()">Ativar alertas de preco</button>
+    </div>
+  </nav>
+</div>
+
+<!-- AD TOPO -->
+<div style="background:rgba(9,9,14,.95);position:relative;z-index:1">
+  <div class="wrap"><div class="ad-slot ad-top" id="adTop"><!-- AdSense topo 728x90 --></div></div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo" onclick="setCat('all');return false;" aria-label="TechDrop — home">
+        <div class="logo-ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <span class="logo-txt">Tech<span>Drop</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" data-cat="all"         onclick="setCat('all');return false;"        >Todas</a></li>
+        <li><a href="#" data-cat="perifericos" onclick="setCat('perifericos');return false;" >Perifericos</a></li>
+        <li><a href="#" data-cat="smartphones" onclick="setCat('smartphones');return false;" >Smartphones</a></li>
+        <li><a href="#" data-cat="notebooks"   onclick="setCat('notebooks');return false;"   >Notebooks</a></li>
+        <li><a href="#" data-cat="componentes" onclick="setCat('componentes');return false;" >Componentes</a></li>
+        <li><a href="#" data-cat="acessorios"  onclick="setCat('acessorios');return false;"  >Acessorios</a></li>
+      </ul>
+
+      <div class="nav-srch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="srchDesktop" type="search" placeholder="Buscar produto..." aria-label="Buscar produto" oninput="handleSearch(this.value)">
+      </div>
+
+      <button class="btn-alert" onclick="showToast('Em breve: alertas de preco por e-mail!')">Alertas de preco</button>
+      <button class="btn-ham" onclick="openDrawer()" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="htitle">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-badge">Atualizado diariamente</div>
+      <h1 class="htitle" id="htitle">As melhores ofertas de<br><em>tecnologia</em> em um so lugar</h1>
+      <p class="hsub">Curadoria real das promocoes mais quentes de Amazon, Shopee, AliExpress e Mercado Livre. So mostramos o que vale a pena comprar.</p>
+      <div class="hstats">
+        <div class="hstat"><span class="hnum" id="statTotal">0</span><span class="hlbl">Ofertas ativas</span></div>
+        <div class="hdiv"></div>
+        <div class="hstat"><span class="hnum">4</span><span class="hlbl">Marketplaces</span></div>
+        <div class="hdiv"></div>
+        <div class="hstat"><span class="hnum">Diario</span><span class="hlbl">Atualizacao</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- MARKETPLACE BAR -->
+    <div class="mp-bar">
+      <div class="mp-scroll" role="toolbar" aria-label="Filtrar por marketplace">
+        <button class="mp-pill active" onclick="setMp('all',this)">
+          <span class="mp-dot" style="background:#6366f1"></span>Todos
+        </button>
+        <button class="mp-pill" onclick="setMp('Amazon',this)">
+          <span class="mp-dot" style="background:var(--c-amazon)"></span>Amazon
+        </button>
+        <button class="mp-pill" onclick="setMp('Shopee',this)">
+          <span class="mp-dot" style="background:var(--c-shopee)"></span>Shopee
+        </button>
+        <button class="mp-pill" onclick="setMp('AliExpress',this)">
+          <span class="mp-dot" style="background:var(--c-ali)"></span>AliExpress
+        </button>
+        <button class="mp-pill" onclick="setMp('Mercado Livre',this)">
+          <span class="mp-dot" style="background:var(--c-ml)"></span>Mercado Livre
+        </button>
+      </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <section id="sec-cat" aria-labelledby="hcat">
+      <div class="sec-head"><h2 id="hcat">Categorias</h2></div>
+      <div class="cat-grid" id="catGrid"></div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section id="sec-feat" aria-labelledby="hfeat">
+      <div class="sec-head">
+        <h2 id="hfeat">Destaques do dia<span class="ct" id="featCt"></span></h2>
+      </div>
+      <div class="feat-grid" id="featGrid"></div>
+    </section>
+
+    <!-- AD MID -->
+    <div class="ad-slot ad-mid" id="adMid"><!-- AdSense meio 728x90 --></div>
+
+    <!-- PRODUTOS -->
+    <section id="sec-prods" aria-labelledby="hprods">
+      <div class="sec-head">
+        <h2 id="hprods">Todas as ofertas<span class="ct" id="prodCt"></span></h2>
+      </div>
+      <div class="ftabs" id="ftabs" role="toolbar" aria-label="Filtrar por categoria"></div>
+      <div class="pgrid" id="pgrid"></div>
+    </section>
+
+    <!-- TRENDING -->
+    <section id="sec-trend" aria-labelledby="htrend">
+      <div class="sec-head"><h2 id="htrend">Mais clicados</h2></div>
+      <div class="tgrid" id="tgrid"></div>
+    </section>
+
+    <!-- AD BOT -->
+    <div class="ad-slot ad-bot" id="adBot"><!-- AdSense rodape 728x90 --></div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div class="fbrand">
+        <a href="#" class="logo" onclick="setCat('all');return false;">
+          <div class="logo-ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <span class="logo-txt">Tech<span>Drop</span></span>
+        </a>
+        <p>Curadoria diaria das melhores promocoes de tecnologia dos principais marketplaces. Sem enrolacao, so o que vale a pena.</p>
+      </div>
+      <div class="fcol">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="#" onclick="setCat('perifericos');return false;">Perifericos de PC</a></li>
+          <li><a href="#" onclick="setCat('smartphones');return false;">Smartphones</a></li>
+          <li><a href="#" onclick="setCat('notebooks');return false;">Notebooks</a></li>
+          <li><a href="#" onclick="setCat('componentes');return false;">Componentes</a></li>
+          <li><a href="#" onclick="setCat('acessorios');return false;">Acessorios</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Informacoes</h4>
+        <ul>
+          <li><a href="#">Sobre o TechDrop</a></li>
+          <li><a href="#">Politica de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Divulgacao de afiliados</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fdisc">
+      <strong>Aviso de afiliados:</strong> O TechDrop participa dos programas de afiliados da Amazon, Shopee, AliExpress e Mercado Livre. Ao clicar nos links e realizar uma compra podemos receber uma comissao sem custo adicional para voce. Precos e disponibilidade podem mudar — confira o valor final no site do vendedor antes de comprar.
+    </div>
+    <div class="fbot">
+      <p>2024 TechDrop. Todos os direitos reservados.</p>
+      <p>Precos verificados diariamente.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+
+/* ==============================================================
+   BANCO DE PRODUTOS
+   ==============================================================
+   Edite este array para adicionar/atualizar produtos.
+   Cada item:
+     id          : numero unico
+     name        : nome do produto
+     desc        : descricao curta
+     category    : 'perifericos'|'smartphones'|'notebooks'|'componentes'|'acessorios'
+     marketplace : 'Amazon'|'Shopee'|'AliExpress'|'Mercado Livre'
+     price       : preco atual   (string)
+     oldPrice    : preco antigo  (string, opcional)
+     discount    : ex. '-33%'   (string, opcional)
+     img         : URL da imagem
+     link        : LINK DE AFILIADO — substituir pelos links reais
+     badge       : 'hot'|'new'|'top'|'sale'|null
+     featured    : true = Destaques do Dia
+     trending    : true = Mais Clicados
+   ============================================================== */
+const PRODUCTS = [
+  // PERIFERICOS
+  {id:1,name:"Mouse Gamer Logitech G502 HERO",desc:"25.600 DPI, 11 botoes programaveis, peso ajustavel",
+   category:"perifericos",marketplace:"Amazon",price:"R$ 299,90",oldPrice:"R$ 449,90",discount:"-33%",
+   img:"https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=380&fit=crop&auto=format",
+   link:"https://amzn.to/SEU-LINK",badge:"hot",featured:true,trending:true},
+
+  {id:2,name:"Teclado Mecanico Redragon Kumara K552",desc:"Switch azul, RGB retroiluminado, layout TKL compacto",
+   category:"perifericos",marketplace:"Shopee",price:"R$ 189,00",oldPrice:"R$ 249,00",discount:"-24%",
+   img:"https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&h=380&fit=crop&auto=format",
+   link:"https://shopee.com.br/SEU-LINK",badge:"sale",featured:false,trending:true},
+
+  {id:3,name:"Headset HyperX Cloud II",desc:"7.1 surround virtual, drivers 53mm, microfone removivel",
+   category:"perifericos",marketplace:"Amazon",price:"R$ 399,00",oldPrice:"R$ 599,00",discount:"-33%",
+   img:"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=380&fit=crop&auto=format",
+   link:"https://amzn.to/SEU-LINK",badge:"top",featured:false,trending:false},
+
+  {id:4,name:"Monitor LG 27\" 144Hz IPS Full HD",desc:"1ms GtG, AMD FreeSync, HDMI e DisplayPort",
+   category:"perifericos",marketplace:"Mercado Livre",price:"R$ 1.199,00",oldPrice:"R$ 1.699,00",discount:"-29%",
+   img:"https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=500&h=380&fit=crop&auto=format",
+   link:"https://produto.mercadolivre.com.br/SEU-LINK",badge:"hot",featured:true,trending:true},
+
+  {id:5,name:"Mousepad Gamer XL Speed 900x400mm",desc:"Superficie de baixa friccao, bordas costuradas, base antiderrapante",
+   category:"perifericos",marketplace:"Shopee",price:"R$ 49,90",oldPrice:"R$ 89,90",discount:"-44%",
+   img:"https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=500&h=380&fit=crop&auto=format",
+   link:"https://shopee.com.br/SEU-LINK",badge:"sale",featured:false,trending:false},
+
+  // SMARTPHONES
+  {id:6,name:"Samsung Galaxy A55 5G 256GB",desc:"6.6\" Super AMOLED 120Hz, camera 50MP, bateria 5000mAh",
+   category:"smartphones",marketplace:"Amazon",price:"R$ 1.799,00",oldPrice:"R$ 2.299,00",discount:"-22%",
+   img:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&h=380&fit=crop&auto=format",
+   link:"https://amzn.to/SEU-LINK",badge:"new",featured:true,trending:true},
+
+  {id:7,name:"Xiaomi Redmi Note 13 Pro 5G",desc:"200MP camera, AMOLED 120Hz, carregamento 67W turbo",
+   category:"smartphones",marketplace:"AliExpress",price:"R$ 1.349,00",oldPrice:"R$ 1.799,00",discount:"-25%",
+   img:"https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500&h=380&fit=crop&auto=format",
+   link:"https://aliexpress.com/item/SEU-LINK",badge:"hot",featured:false,trending:true},
+
+  {id:8,name:"Motorola Edge 40 Neo 256GB",desc:"6.55\" pOLED 144Hz, IP68, 68W TurboPower",
+   category:"smartphones",marketplace:"Mercado Livre",price:"R$ 1.499,00",oldPrice:"R$ 1.999,00",discount:"-25%",
+   img:"https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&h=380&fit=crop&auto=format",
+   link:"https://produto.mercadolivre.com.br/SEU-LINK",badge:"sale",featured:false,trending:false},
+
+  // NOTEBOOKS
+  {id:9,name:"Lenovo IdeaPad 3i Intel Core i5",desc:"8GB RAM, SSD 256GB NVMe, tela 15.6\" Full HD",
+   category:"notebooks",marketplace:"Amazon",price:"R$ 2.499,00",oldPrice:"R$ 3.299,00",discount:"-24%",
+   img:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=380&fit=crop&auto=format",
+   link:"https://amzn.to/SEU-LINK",badge:"hot",featured:true,trending:true},
+
+  {id:10,name:"Acer Aspire 5 AMD Ryzen 5",desc:"16GB RAM, 512GB SSD NVMe, GPU Radeon integrada",
+   category:"notebooks",marketplace:"Shopee",price:"R$ 2.799,00",oldPrice:"R$ 3.599,00",discount:"-22%",
+   img:"https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=380&fit=crop&auto=format",
+   link:"https://shopee.com.br/SEU-LINK",badge:"top",featured:false,trending:false},
+
+  {id:11,name:"Dell Inspiron 15 Intel i7 512GB",desc:"16GB RAM, tela 15.6\" FHD, Windows 11 Home original",
+   category:"notebooks",marketplace:"Mercado Livre",price:"R$ 3.299,00",oldPrice:"R$ 4.199,00",discount:"-21%",
+   img:"https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&h=380&fit=crop&auto=format",
+   link:"https://produto.mercadolivre.com.br/SEU-LINK",badge:"new",featured:false,trending:true},
+
+  // COMPONENTES
+  {id:12,name:"SSD Kingston NV2 1TB NVMe M.2",desc:"Leitura ate 3500MB/s, interface PCIe 4.0, upgrade facil",
+   category:"componentes",marketplace:"Amazon",price:"R$ 289,90",oldPrice:"R$ 449,00",discount:"-35%",
+   img:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=380&fit=crop&auto=format",
+   link:"https://amzn.to/SEU-LINK",badge:"hot",featured:false,trending:true},
+
+  {id:13,name:"Memoria RAM Corsair 32GB DDR5 5600MHz",desc:"Kit 2x16GB, CL36, XMP 3.0, compativel Intel e AMD",
+   category:"componentes",marketplace:"AliExpress",price:"R$ 499,00",oldPrice:"R$ 799,00",discount:"-38%",
+   img:"https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=500&h=380&fit=crop&auto=format",
+   link:"https://aliexpress.com/item/SEU-LINK",badge:"sale",featured:false,trending:false},
+
+  {id:14,name:"Placa de Video RX 6600 8GB GDDR6",desc:"Gaming 1440p, ray tracing, RDNA 2, HDMI 2.1",
+   category:"componentes",marketplace:"Mercado Livre",price:"R$ 1.299,00",oldPrice:"R$ 1.799,00",discount:"-28%",
+   img:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&h=380&fit=crop&auto=format",
+   link:"https://produto.mercadolivre.com.br/SEU-LINK",badge:"top",featured:true,trending:true},
+
+  // ACESSORIOS
+  {id:15,name:"Carregador GaN 65W 3 Portas USB-C",desc:"Power Delivery 3.0, compacto, compativel com notebooks",
+   category:"acessorios",marketplace:"AliExpress",price:"R$ 79,00",oldPrice:"R$ 149,00",discount:"-47%",
+   img:"https://images.unsplash.com/photo-1625842268584-8f3296236761?w=500&h=380&fit=crop&auto=format",
+   link:"https://aliexpress.com/item/SEU-LINK",badge:"hot",featured:false,trending:true},
+
+  {id:16,name:"Webcam Logitech C920 Full HD 1080p",desc:"30fps, autofocus, microfone estereo integrado",
+   category:"acessorios",marketplace:"Shopee",price:"R$ 399,00",oldPrice:"R$ 599,00",discount:"-33%",
+   img:"https://images.unsplash.com/photo-1586015555751-63bb77f4322a?w=500&h=380&fit=crop&auto=format",
+   link:"https://shopee.com.br/SEU-LINK",badge:"new",featured:false,trending:false},
+
+  {id:17,name:"Hub USB-C 7 em 1",desc:"HDMI 4K, USB 3.0 x3, SD/microSD, Power Delivery 100W",
+   category:"acessorios",marketplace:"AliExpress",price:"R$ 119,00",oldPrice:"R$ 199,00",discount:"-40%",
+   img:"https://images.unsplash.com/photo-1619741497619-54e3f6a9da5f?w=500&h=380&fit=crop&auto=format",
+   link:"https://aliexpress.com/item/SEU-LINK",badge:"sale",featured:false,trending:true}
+];
+
+/* ── CONFIG ── */
+const CATS = [
+  {key:'perifericos', name:'Perifericos de PC', icon:'&#128377;'},
+  {key:'smartphones', name:'Smartphones',       icon:'&#128241;'},
+  {key:'notebooks',   name:'Notebooks',          icon:'&#128187;'},
+  {key:'componentes', name:'Componentes',        icon:'&#9881;'},
+  {key:'acessorios',  name:'Acessorios',         icon:'&#128268;'}
+];
+const MPC = {Amazon:'#ff9900',Shopee:'#ee4d2d',AliExpress:'#e62e2e','Mercado Livre':'#e8c800'};
+const BLB = {hot:'Imperdivel',new:'Novidade',top:'Top venda',sale:'Promocao'};
+const FALLBACK = 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop';
+
+/* ── STATE ── */
+let S = {cat:'all', mp:'all', q:''};
+
+/* ── ESCAPE HELPER ── */
+function x(s){
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ── RENDER CATEGORIES ── */
+function renderCats(){
+  document.getElementById('catGrid').innerHTML = CATS.map(c=>{
+    const n = PRODUCTS.filter(p=>p.category===c.key).length;
+    const on = S.cat===c.key ? ' on':'';
+    return `<a class="cat-card${on}" href="#sec-prods" onclick="setCat('${c.key}');return true;">
+      <div class="cat-ic">${c.icon}</div>
+      <div class="cat-nm">${c.name}</div>
+      <div class="cat-ct">${n} oferta${n!==1?'s':''}</div>
+    </a>`;
+  }).join('');
+}
+
+/* ── RENDER FEATURED ── */
+function renderFeat(){
+  const list = PRODUCTS.filter(p=>p.featured).slice(0,4);
+  document.getElementById('featCt').textContent = ` (${list.length})`;
+  document.getElementById('featGrid').innerHTML = list.map(p=>`
+    <a class="feat-card" href="${x(p.link)}" target="_blank" rel="noopener noreferrer sponsored" onclick="track(${p.id})">
+      <div class="feat-img">
+        <img src="${x(p.img)}" alt="${x(p.name)}" loading="lazy" width="180" height="150"
+             onerror="this.src='${FALLBACK}'">
+      </div>
+      <div class="feat-body">
+        <div class="feat-mp" style="color:${MPC[p.marketplace]}">
+          <span style="width:6px;height:6px;border-radius:50%;background:${MPC[p.marketplace]};display:inline-block;flex-shrink:0"></span>
+          ${x(p.marketplace)}
+        </div>
+        <div class="feat-nm">${x(p.name)}</div>
+        <div class="feat-ds">${x(p.desc)}</div>
+        <div class="feat-pr">
+          <span class="feat-pnow">${x(p.price)}</span>
+          ${p.oldPrice?`<span class="feat-pold">${x(p.oldPrice)}</span>`:''}
+          ${p.discount?`<span class="feat-pct">${x(p.discount)}</span>`:''}
+        </div>
+        <div class="feat-cta" aria-hidden="true">Ver oferta &#8594;</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+/* ── FILTER TABS ── */
+function renderTabs(){
+  const all = [{key:'all',name:'Todas'},...CATS];
+  document.getElementById('ftabs').innerHTML = all.map(c=>
+    `<button class="ftab${S.cat===c.key?' active':''}" onclick="setCat('${c.key}')">${c.name}</button>`
+  ).join('');
+}
+
+/* ── FILTERED PRODUCTS ── */
+function filtered(){
+  const q = S.q.toLowerCase();
+  return PRODUCTS.filter(p=>{
+    const okC = S.cat==='all' || p.category===S.cat;
+    const okM = S.mp==='all'  || p.marketplace===S.mp;
+    const okQ = !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+    return okC && okM && okQ;
+  });
+}
+
+/* ── RENDER PRODUCTS ── */
+function renderProds(){
+  const list = filtered();
+  document.getElementById('prodCt').textContent = ` (${list.length})`;
+  document.getElementById('statTotal').textContent = PRODUCTS.length;
+
+  if(!list.length){
+    document.getElementById('pgrid').innerHTML = `
+      <div class="empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <p>Nenhuma oferta encontrada para este filtro.</p>
+      </div>`;
+    return;
+  }
+
+  document.getElementById('pgrid').innerHTML = list.map((p,i)=>`
+    <article class="pcard anim" style="animation-delay:${Math.min(i,9)*.04}s">
+      ${p.badge?`<span class="pbadge b-${p.badge}">${BLB[p.badge]}</span>`:''}
+      <div class="pimg">
+        <img src="${x(p.img)}" alt="${x(p.name)}" loading="lazy" width="210" height="158"
+             onerror="this.src='${FALLBACK}'">
+      </div>
+      <div class="pbody">
+        <div class="pmp" style="color:${MPC[p.marketplace]}">
+          <span class="pmp-dot" style="background:${MPC[p.marketplace]}"></span>
+          ${x(p.marketplace)}
+        </div>
+        <h3 class="pname">${x(p.name)}</h3>
+        <p class="pdesc">${x(p.desc)}</p>
+        <div class="ppr">
+          <span class="pnow">${x(p.price)}</span>
+          ${p.oldPrice?`<span class="pwas">${x(p.oldPrice)}</span>`:''}
+          ${p.discount?`<span class="ppct">${x(p.discount)}</span>`:''}
+        </div>
+      </div>
+      <div class="pfoot">
+        <a class="btn-offer" href="${x(p.link)}" target="_blank"
+           rel="noopener noreferrer sponsored"
+           onclick="track(${p.id})"
+           aria-label="Ver oferta de ${x(p.name)}">Ver oferta</a>
+      </div>
+    </article>
+  `).join('');
+}
+
+/* ── RENDER TRENDING ── */
+function renderTrend(){
+  const list = PRODUCTS.filter(p=>p.trending).slice(0,6);
+  const rc = ['gold','silver','bronze'];
+  document.getElementById('tgrid').innerHTML = list.map((p,i)=>`
+    <a class="titem" href="${x(p.link)}" target="_blank" rel="noopener noreferrer sponsored" onclick="track(${p.id})">
+      <span class="trank ${rc[i]||''}">${String(i+1).padStart(2,'0')}</span>
+      <img class="timg" src="${x(p.img)}" alt="${x(p.name)}" loading="lazy" width="46" height="46"
+           onerror="this.src='${FALLBACK}'">
+      <div class="tinfo">
+        <div class="tnm">${x(p.name)}</div>
+        <div class="tmeta">
+          <span style="width:6px;height:6px;border-radius:50%;background:${MPC[p.marketplace]};display:inline-block;flex-shrink:0"></span>
+          <span style="font-size:11px;color:var(--text-3)">${x(p.marketplace)}</span>
+          ${p.discount?`<span class="ppct" style="font-size:10px">${x(p.discount)}</span>`:''}
+        </div>
+      </div>
+      <span class="tpr">${x(p.price)}</span>
+    </a>
+  `).join('');
+}
+
+/* ── NAV ACTIVE ── */
+function syncNav(cat){
+  document.querySelectorAll('#navLinks a').forEach(a=>
+    a.classList.toggle('active', a.dataset.cat===cat));
+  document.querySelectorAll('.drawer a[data-cat]').forEach(a=>{
+    const on = a.dataset.cat===cat;
+    a.classList.toggle('active',on);
+    const d = a.querySelector('.d-dot');
+    if(d) d.style.background = on ? 'var(--accent-b)' : 'var(--text-3)';
+  });
+}
+
+/* ── FILTER ACTIONS ── */
+function setCat(cat){
+  S.cat = cat;
+  renderCats(); renderTabs(); renderProds(); syncNav(cat);
+  const el = document.getElementById('sec-prods');
+  if(el) window.scrollTo({top:el.getBoundingClientRect().top+scrollY-74,behavior:'smooth'});
+}
+
+function setMp(mp, btn){
+  S.mp = mp;
+  document.querySelectorAll('.mp-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProds();
+}
+
+function handleSearch(v){
+  S.q = v.trim();
+  renderProds();
+}
+
+/* ── DRAWER ── */
+function openDrawer(){
+  document.getElementById('dBg').classList.add('open');
+  document.body.style.overflow='hidden';
+  document.querySelector('.btn-ham').setAttribute('aria-expanded','true');
+}
+function closeDrawer(){
+  document.getElementById('dBg').classList.remove('open');
+  document.body.style.overflow='';
+  document.querySelector('.btn-ham').setAttribute('aria-expanded','false');
+}
+function drawerCat(cat){ closeDrawer(); setCat(cat); }
+
+/* ── TRACKING ── */
+function track(id){
+  // Descomentar quando Google Analytics estiver integrado:
+  // const p = PRODUCTS.find(x=>x.id===id);
+  // if(typeof gtag!=='undefined') gtag('event','click_offer',{product_id:id,product_name:p?.name,marketplace:p?.marketplace});
+  console.debug('[TechDrop] click id:',id);
+}
+
+/* ── TOAST ── */
+let _toastT;
+function showToast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('on');
+  clearTimeout(_toastT);
+  _toastT=setTimeout(()=>el.classList.remove('on'),3200);
+}
+
+/* ── KEYBOARD ── */
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded',()=>{
+  renderCats(); renderFeat(); renderTabs(); renderProds(); renderTrend(); syncNav('all');
+});
+</script>
+
+<!-- Google Analytics — descomentar e substituir G-XXXXXXXXXX -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
+</script>
+-->
+
+<!-- Google AdSense — descomentar e substituir ca-pub-XXXXXXXX
+     Depois adicionar classe "live" nos elementos .ad-slot para exibi-los -->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
+-->
+
+</body>
+</html>
